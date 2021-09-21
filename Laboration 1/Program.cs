@@ -65,4 +65,4 @@ namespace Laboration_1
             Console.WriteLine($"\nSumman av alla identifierade strängar av tal: {sum}");
         }
     }
-}
+} // Test kommentar
