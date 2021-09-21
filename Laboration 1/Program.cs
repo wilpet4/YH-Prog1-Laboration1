@@ -31,7 +31,7 @@ namespace Laboration_1
             {
                 for (int j = 0; j <= 9; j++) // Här går loopen igenom alla tal 0-9 för att identifiera vilket tal som finns i positionen.
                 {
-                    if (separatedString[i].ToString() == j.ToString()) // Om tecknet i position "i" är lika med siffran i "j".
+                    if (separatedString[i].ToString() == j.ToString()) // Om tecknet i position "i" är lika med siffran "j".
                     {
                         startPos = i; // Här sparar jag första positionen där en siffra uppkommer i en variabel.
                         if (stringToProcess.IndexOf(j.ToString(), i + 1) >= 0) // Eftersom IndexOf() returnerar -1 när den inte hittar ett tecken så
@@ -58,7 +58,7 @@ namespace Laboration_1
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.Write(afterString + "\n"); // Här skrivs alla tecken efter den upphittade strängen ut.
             }
-            for (int i = 0; i < processedStringList.Count; i++) // Loopen raknar igenom alla färdiga upphittade strängar.
+            for (int i = 0; i < processedStringList.Count; i++) // Loopen räknar igenom alla färdiga upphittade strängar.
             {
                 sum += long.Parse(processedStringList[i]); // Här adderar jag alla färdiga strängar av siffror i listan.
             }
