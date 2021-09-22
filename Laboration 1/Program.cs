@@ -18,8 +18,8 @@ namespace Laboration_1
         }
         private static void ProcessString(in string stringToProcess) // Detta är själva metoden som gör bearbetar strängen.
         {
-            List<string> foundStringList = new List<string>(); // Denna lista innehåller alla upphittade strängar.
-            List<int[]> posList = new List<int[]>(); // Denna lista innehåller start- och slutpositioner för alla upphittade strängar.
+            List<string> foundStringList = new List<string>(); // Denna lista ska innehålla alla upphittade strängar.
+            List<int[]> posList = new List<int[]>(); // Denna lista ska innehålla start- och slutpositioner för alla upphittade strängar.
             BigInteger sum = 0;
             int startPos;
             int endPos;
