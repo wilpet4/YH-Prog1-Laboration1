@@ -16,7 +16,7 @@ namespace Laboration_1
                 ProcessString(Console.ReadLine());
             }
         }
-        private static void ProcessString(in string stringToProcess) // Detta är själva metoden som gör bearbetar strängen.
+        private static void ProcessString(in string stringToProcess)
         {
             List<string> foundStringList = new List<string>(); // Denna lista ska innehålla alla upphittade strängar.
             List<int[]> posList = new List<int[]>(); // Denna lista ska innehålla start- och slutpositioner för alla upphittade strängar.
@@ -36,7 +36,7 @@ namespace Laboration_1
                         string finishedString = stringToProcess.Substring(startPos, (endPos - startPos) + 1);// Använder start- och slutpositioner för att lägga in strängen i en variabel.
                         if (BigInteger.TryParse(finishedString, out BigInteger result)) // Rensar bort strängar som innehåller annat än siffror innan de läggs in i listan.
                         {
-                            posList.Add(new int[2] { startPos, endPos });
+                            posList.Add(new int[2] {startPos, endPos});
                             foundStringList.Add(finishedString);
                         }
                         break;
@@ -48,11 +48,11 @@ namespace Laboration_1
                 string beforeFoundString = stringToProcess.Remove(posList[i][0]);
                 string afterFoundString = stringToProcess.Remove(0, (posList[i][1] + 1));
 
-                Console.Write(beforeFoundString); // Här skrivs alla tecken innan den upphittade strängen ut.
+                Console.Write(beforeFoundString);
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.Write(foundStringList[i]); // Här skrivs den upphittade strängen ut.
+                Console.Write(foundStringList[i]);
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.Write(afterFoundString + "\n"); // Här skrivs alla tecken efter den upphittade strängen ut.
+                Console.Write(afterFoundString + "\n");
 
                 sum += BigInteger.Parse(foundStringList[i]);
             }
